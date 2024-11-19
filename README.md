@@ -33,12 +33,8 @@ ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 ```
 
-4. Initialize the database:
-```bash
-alembic upgrade head
-```
 
-5. Run the application:
+4. Run the application:
 ```bash
 uvicorn app.main:app --reload
 ```
