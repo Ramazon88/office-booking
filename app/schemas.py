@@ -84,7 +84,7 @@ class BookingBase(BaseModel):
         json_encoders = {
             datetime: lambda v: v.strftime('%d-%m-%Y %H:%M')
         }
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "start_time": "19-10-2024 10:00",
                 "end_time": "19-11-2024 12:00"
@@ -96,7 +96,7 @@ class BookingCreate(BookingBase):
     room_id: int
 
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "start_time": "19-10-2024 10:00",
                 "end_time": "19-11-2024 12:00"
